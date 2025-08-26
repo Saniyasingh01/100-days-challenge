@@ -173,7 +173,7 @@ Q11: Write a program to input an integer and check whether it is even or odd usi
   int main()
   {
      int a ;
-     printf("ENTER A INTEGER VALUE: ");
+     printf("ENTER AN INTEGER VALUE: ");
      scanf("%d" , a);
      if (a%2 == 0)
      {
@@ -194,7 +194,7 @@ Q12: Write a program to input an integer and check whether it is positive, negat
   int main()
   {
      int a  ;
-     printf("ENTER A INTEGER VALUE: ");
+     printf("ENTER AN INTEGER VALUE: ");
      scanf("%d" , &a);
      
     
