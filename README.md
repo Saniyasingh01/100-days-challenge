@@ -35,6 +35,8 @@ int main()
     printf("SUM=%f DIFFERENCE=%f PRODUCT=%f QUOTIENT=%f/n", sum,diff,product,quotient);
     return0;
 }
+<img width="1920" height="1140" alt="image" src="https://github.com/user-attachments/assets/01530501-6059-414e-8e46-56ac4d152b6b" />
+
 
 
 Q3: Write a program to calculate the area and perimeter of a rectangle given its length and breadth.
@@ -163,5 +165,56 @@ int main()
 
     printf("TIME= %d:%d:%d/n", hrs,mins,secs);
     return0;
-}    
+}   
+
+Q11: Write a program to input an integer and check whether it is even or odd using if–else.
+
+  #include <stdio.h>
+  int main()
+  {
+     int a ;
+     printf("ENTER A INTEGER VALUE: ");
+     scanf("%d" , a);
+     if (a%2 == 0)
+     {
+       printf("THE NUMBER ENTERED IS EVEN.");
+    }
+    else
+    {
+      printf("THE NUMBER ENTERED IS ODD.");
+    }
+    return 0;
+}
+     
+<img width="1920" height="1140" alt="image" src="https://github.com/user-attachments/assets/941ba982-7c21-43b2-b6ba-4928240a030b" />
+
+Q12: Write a program to input an integer and check whether it is positive, negative or zero using nested if–else.
+
+  #include <stdio.h>
+  int main()
+  {
+     int a  ;
+     printf("ENTER A INTEGER VALUE: ");
+     scanf("%d" , &a);
+     
+    
+     if (a >= 0)
+     {
+        if(a==0)
+        {
+            printf("THE NUMBER ENTERED IS ZERO.");
+        }
+        else
+        {
+            printf("THE NUMBER ENTERED IS POSITIVE.");
+        }
+    }
+    else
+    {
+      printf("THE NUMBER ENTERED IS NEGATIVE.");
+    }
+    return 0;
+}
+     
+<img width="1920" height="1140" alt="image" src="https://github.com/user-attachments/assets/b93c977c-8b12-4858-ace7-fd4b47c641a5" />
 
