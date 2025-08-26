@@ -15,6 +15,8 @@ int main()
     printf("THE SUM OF %d and %d is %d/n", num1,num2,sum);
     return0;
 }
+<img width="1920" height="1140" alt="image" src="https://github.com/user-attachments/assets/31fe7d9c-45fc-4b6b-b92a-c0fa9e827560" />
+
 
 Q2: Write a program to input two numbers and display their sum, difference, product, and quotient.
 
