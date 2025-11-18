@@ -799,22 +799,250 @@ int main()
 <img width="1920" height="1140" alt="image" src="https://github.com/user-attachments/assets/d4258142-c7cc-4be3-b7a1-0373deb09806" />
 
 
+Q31: Write a program to take a number as input and print its equivalent binary representation.
+
+#include <stdio.h>
+
+int main() {
+    int num;
+    scanf("%d", &num);
+
+if (num == 0) {
+        printf("0");
+        return 0;
+    }
+
+int binary[32];
+    int index = 0;
+
+ while (num > 0) {
+        binary[index] = num % 2;
+        num /= 2;
+        index++;
+    }
+
+   
+ for (int i = index - 1; i >= 0; i--) {
+        printf("%d", binary[i]);
+    }
+
+ return 0;
+}
+
+
+
+Q32: Write a program to check if a number is a palindrome.
+
+int main() {
+    int num, original, reversed = 0, digit;
+
+ scanf("%d", &num);
+
+  original = num;  
+    while (num > 0) {
+        digit = num % 10;         
+        reversed = reversed * 10 + digit;  
+        num /= 10;                
+    }
+
+  if (original == reversed) {
+        printf("Palindrome");
+    } else {
+        printf("Not palindrome");
+    }
+
+ return 0;
+}
 
 
 
 
+Q33: Write a program to check if a number is an Armstrong number.
+
+#include <stdio.h>
+
+int main() {
+    int num, original, sum = 0, digit;
+
+ scanf("%d", &num);
+
+ original = num; 
+
+  while (num > 0) {
+        digit = num % 10;          
+        sum += digit * digit * digit;  
+        num /= 10;                 
+    }
+    if (sum == original) {
+        printf("Armstrong");
+    } else {
+        printf("Not Armstrong");
+    }
+
+ return 0;
+}
 
 
 
+Q34: Write a program to check if a number is prime.
+
+#include <stdio.h>
+
+int main() {
+    int num, i, isPrime = 1;
+
+ scanf("%d", &num);
+    if (num <= 1) {
+        isPrime = 0;   
+    } else {
+        for (i = 2; i * i <= num; i++) {
+            if (num % i == 0) {
+                isPrime = 0;
+                break;
+            }
+        }
+    }
+
+ if (isPrime)
+        printf("Prime");
+    else
+        printf("Not prime");
+
+   return 0;
+}
 
 
 
+Q35: Write a program to print all factors of a given number.
+
+#include <stdio.h>
+
+int main() {
+    int num;
+
+ scanf("%d", &num);
+
+ for (int i = 1; i <= num; i++) {
+        if (num % i == 0) {
+            printf("%d ", i);
+        }
+    }
+
+ return 0;
+}
 
 
 
+Q36: Write a program to find the HCF (GCD) of two numbers.
+
+#include <stdio.h>
+
+int main() {
+    int a, b;
+
+ scanf("%d %d", &a, &b);
+
+   
+ while (b != 0) {
+        int temp = b;
+        b = a % b;
+        a = temp;
+    }
+
+ printf("%d", a);
+
+ return 0;
+}
+
+Q37: Write a program to find the LCM of two numbers.
+
+int main() {
+    int a, b, x, y, temp;
+
+ scanf("%d %d", &a, &b);
+
+ x = a;
+    y = b;
+
+    
+ while (y != 0) {
+        temp = y;
+        y = x % y;
+        x = temp;
+    }
+
+int gcd = x;
+    int lcm = (a * b) / gcd;
+
+ printf("%d", lcm);
+
+ return 0;
+}
+
+Q38: Write a program to find the sum of digits of a number.
+
+#include <stdio.h>
+
+int main() {
+    int num, sum = 0, digit;
+
+scanf("%d", &num);
+
+ while (num > 0) {
+        digit = num % 10;   
+        sum += digit;      
+        num /= 10;         
+    }
+
+ printf("%d", sum);
+
+  return 0;
+}
+
+Q39: Write a program to find the product of odd digits of a number.
+
+#include <stdio.h>
+
+int main() {
+    int num, digit, product = 1;
+    int hasOdd = 0;
+
+scanf("%d", &num);
+
+ while (num > 0) {
+        digit = num % 10;     
+        if (digit % 2 == 1) 
+        { 
+            product *= digit;
+            hasOdd = 1;
+        }
+  num /= 10;
+    }
 
 
+ printf("%d", product);
 
+ return 0;
+}
 
+Q40: Write a program to find the 1’s complement of a binary number and print it.
 
+#include <stdio.h>
+
+int main() 
+{
+    char bin[100];
+    scanf("%s", bin);
+
+ for (int i = 0; bin[i] != '\0'; i++) 
+    {
+        if (bin[i] == '0')
+            printf("1");
+        else if (bin[i] == '1')
+            printf("0");
+    }
+
+ return 0;
+}
+ 
 
